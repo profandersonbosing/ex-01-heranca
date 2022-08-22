@@ -34,4 +34,20 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
     
+    public void sacar(double valorSaque){
+        
+        if (valorSaque > saldo) {
+            System.out.println("Não foi possivel sacar pois o saldo será "
+                    + "negativo. Valor disponivel :" + saldo);
+        } else {
+            saldo = saldo - valorSaque;
+        }
+        
+    }
+    
+    
+    public void depositar(){
+      
+    }
+    
 }
