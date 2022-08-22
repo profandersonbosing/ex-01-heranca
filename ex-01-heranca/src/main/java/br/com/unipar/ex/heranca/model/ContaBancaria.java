@@ -41,13 +41,22 @@ public class ContaBancaria {
                     + "negativo. Valor disponivel :" + saldo);
         } else {
             saldo = saldo - valorSaque;
+            System.out.println("Valor Sacado. Novo Saldo: " + saldo);
         }
         
     }
     
     
-    public void depositar(){
-      
+    public void depositar(double valorDeposito){
+        
+        if (valorDeposito < 0) {
+            System.out.println("Não é possivel realizar depositos com valores"
+                    + " negativos");
+        } else {
+            saldo = saldo + valorDeposito;
+            System.out.println("Valor depositado. Novo Saldo: " + saldo);
+        }
+        
     }
     
 }
